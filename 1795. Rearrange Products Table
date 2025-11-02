@@ -1,0 +1,9 @@
+https://leetcode.com/problems/rearrange-products-table/
+
+select product_id, store, price
+from
+    (select * from products) p
+    unpivot
+    (price for store in (store1,store2,store3)
+
+    ) as unpvt
